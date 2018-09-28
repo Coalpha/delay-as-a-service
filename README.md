@@ -6,7 +6,7 @@ To make requests to this server, you must query it.
 
 For example:
 
-`coalpha.github.io/delay-as-a-service/query?ms=1000,time=1520132166330`
+`your-node-js-webserver/delay-as-a-service/query?ms=1000&time=1520132166330`
 
 By the way, I'm not actually hosting it there so don't send requests to that URL. It's not gonna work.
 
