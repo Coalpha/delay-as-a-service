@@ -2,23 +2,24 @@ const express = require('express');
 
 const port = 443; // http
 const app = express();
+
 app.use(express.static('.'));
+
 app.get('/', (req, res) => {
   res.redirect('/README.md');
 });
+
 app.get('/query', (req, res) => {
-  const delay = new Date().getTime() - req.query.time;
-  // This shouldn't be negative, like, ever
-  console.log(delay);
-  const waitms = req.query.ms - (delay * 2);
-  if (waitms <= 50) {
-    // It's a reverse arrow function
-    res.send('Sent it back instantly');
+  const networkLatency = new Date().getTime() - req.query.time;
+  const roundtripLatency = networkLatency * 2;
+  const waitTime = req.query.ms - roundtripLatency;
+  if (waitTime < 2) {
+    res.send(0);
   } else {
-    setTimeout(() => res.send(`Waited ${waitms}ms`), waitms);
+    setTimeout(() => { res.send(1); }, waitTime);
   }
 });
+
 app.listen(port, () => {
   console.log(`We're up and running on port ${port}`);
 });
-// I was gonna minify this but then I realized that I didn't care
