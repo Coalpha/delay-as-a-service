@@ -1,0 +1,8 @@
+{
+   "devDependencies": {
+      "express": "latest"
+   },
+   "scripts": {
+      "start": "node lib/server.js"
+   }
+}

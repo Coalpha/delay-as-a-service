@@ -1,0 +1,46 @@
+html, body {
+   margin: 0;
+   height: 100%;
+   width: 100%;
+   box-sizing: border-box;
+   font-family: Menlo, Consolas, monospace;
+   font-size: 18px;
+}
+
+body {
+   background-color: papayawhip;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+p {
+   text-align: center;
+}
+
+#buttongroup {
+   margin-top: 1%;
+   margin-bottom: 3%;
+}
+
+button {
+   cursor: pointer;
+   padding: 5px 10px;
+   border: 2px solid rgb(163, 122, 76);
+   background-color: rgb(199, 167, 118);
+   font-family: inherit;
+}
+
+button:hover {
+   background: transparent;
+}
+
+#time {
+   font-size: 30px;
+   transition: all;
+}
+
+.paused {
+   text-decoration: underline overline #111;
+}
