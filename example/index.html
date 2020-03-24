@@ -5,12 +5,16 @@
       <script src="../lib/client.js"></script>
    </head>
    <body>
-      <p>
-         This is an example of how you might use DAAS (Delay as a Service).
-         <br>
-         Notice how once you click one of the buttons, everything on the page
-         freezes, including the UI.
-      </p>
+      <div>
+         <p>
+            This is an example of DAAS (Delay as a Service).
+            <br>
+            The clock below is updated by a function that runs every second via
+            <span class="backtick">window.setInterval</span>.
+            <br>
+            See what weird stuff happens when you pause the eventloop:
+         </p>
+      </div>
       <div id="buttongroup">
          <button id="sleep1"></button>
          <button id="sleep2"></button>

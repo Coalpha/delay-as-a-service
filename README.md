@@ -10,8 +10,6 @@ server of some sorts. Theoretically, the server could be implemented using a
 service worker so that latency is no longer an issue.
 I'll leave that up to someone else to implement.
 
-If you'd like to try the example out (why?):
-   - Clone this repo
-   - `npm start`
-   - Go to `localhost/example`
-   - Feel pain
+### Check out the example webpage:
+
+[![Click me, I'm a link!](example/example.png "The example DAAS webpage")](example)
