@@ -51,6 +51,6 @@ button:hover {
    to { text-decoration: underline overline black; }
 }
 
-.paused {
+.clock-paused {
    animation: time-paused .5s alternate infinite;
 }

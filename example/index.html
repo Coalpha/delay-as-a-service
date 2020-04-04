@@ -1,8 +1,8 @@
 <html>
    <head>
+      <meta charset="UTF-8">
       <title>DAAS Example</title>
       <link rel="stylesheet" href="style.css">
-      <script src="../lib/client.js"></script>
    </head>
    <body>
       <div>
@@ -12,16 +12,17 @@
             The clock below is updated by a function that runs every second via
             <span class="backtick">window.setInterval</span>.
             <br>
-            See what weird stuff happens when you pause the eventloop:
+            CSS animations like the clock flashing while paused still work while
+            the event loop is paused.
          </p>
       </div>
       <div id="buttongroup">
-         <button id="sleep1"></button>
-         <button id="sleep2"></button>
-         <button id="sleep3"></button>
-         <button id="sleep5"></button>
+         <button data-sleep="1"></button>
+         <button data-sleep="2"></button>
+         <button data-sleep="3"></button>
+         <button data-sleep="5"></button>
       </div>
       <div id="time"></div>
-      <script src="example.js"></script>
+      <script src="example.js" type="module"></script>
    </body>
 </html>
